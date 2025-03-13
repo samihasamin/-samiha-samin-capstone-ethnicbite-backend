@@ -1,0 +1,32 @@
+{
+  "name": "samiha-samin-capstone-ethnicbite-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate": "knex --knexfile=knexfile.js migrate:latest",
+    "migrate:down": "knex --knexfile=knexfile.js migrate:down",
+    "migrate:rollback": "knex --knexfile=knexfile.js migrate:rollback",
+    "seed": "knex --knexfile=knexfile.js seed:run",
+    "start": "node --watch index.js",
+    "dev": "node --watch index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samihasamin/-samiha-samin-capstone-ethnicbite-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samihasamin/-samiha-samin-capstone-ethnicbite-backend/issues"
+  },
+  "homepage": "https://github.com/samihasamin/-samiha-samin-capstone-ethnicbite-backend#readme",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "knex": "^3.1.0",
+    "mysql2": "^3.13.0"
+  }
+}
