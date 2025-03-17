@@ -1,4 +1,4 @@
-import knex from "../knex";
+import knex from "../knex.js";
 
 const placeOrder = async (req, res) => {
   const { meal_seeker_id, caterer_id, meals, total_price } = req.body;

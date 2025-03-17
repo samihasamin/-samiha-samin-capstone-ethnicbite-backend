@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
-import caterersRoutes from "./routes/caterers-routes";
-import ordersRoutes from "./routes/orders-routes";
+import caterersRoutes from "./routes/caterers-routes.js";
+import ordersRoutes from "./routes/orders-routes.js";
 
 const app = express();
 

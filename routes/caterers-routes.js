@@ -2,7 +2,7 @@ import express from "express";
 import {
   getAllCaterers,
   getCatererById,
-} from "../controllers/caterers-controller";
+} from "../controllers/caterers-controller.js";
 
 const router = express.Router();
 
