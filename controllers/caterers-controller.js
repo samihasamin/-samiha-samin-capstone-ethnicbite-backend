@@ -41,7 +41,7 @@ const getCatererById = async (req, res) => {
       .select("description")
       .first();
 
-    const profilePhoto = await knex("profile_photos")
+    const profilePicture = await knex("profile_photos")
       .where("caterer_id", id)
       .select("photo_url")
       .first();
@@ -49,7 +49,7 @@ const getCatererById = async (req, res) => {
     res.status(200).json({
       ...caterer,
       aboutMe,
-      profilePhoto,
+      profilePicture,
       meals,
       reviews,
     });
