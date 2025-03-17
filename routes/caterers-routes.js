@@ -1,0 +1,13 @@
+import express from "express";
+import {
+  getAllCaterers,
+  getCatererById,
+} from "../controllers/caterers-controller";
+
+const router = express.Router();
+
+router.get("/cuisine", getAllCaterers);
+
+router.get("/:id", getCatererById);
+
+export default router;
