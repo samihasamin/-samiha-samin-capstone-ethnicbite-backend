@@ -1,4 +1,4 @@
-import knex from "../knex.js";
+import knex from "../db.js";
 
 const getAllCaterers = async (req, res) => {
   try {
@@ -7,7 +7,7 @@ const getAllCaterers = async (req, res) => {
       .join("cuisines", "caterers.id", "cuisines.caterer_id");
 
     if (req.query.cuisine) {
-      query = query.where("cuisine.type", req.query.cuisine);
+      query = query.where("cuisines.type", req.query.cuisine);
     }
 
     const caterers = await query;

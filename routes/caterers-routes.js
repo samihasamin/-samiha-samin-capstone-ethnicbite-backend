@@ -6,6 +6,8 @@ import {
 
 const router = express.Router();
 
+router.get("/", getAllCaterers);
+
 router.get("/cuisine", getAllCaterers);
 
 router.get("/:id", getCatererById);

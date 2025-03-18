@@ -3,21 +3,21 @@
  * @returns { Promise<void> }
  */
 export function up(knex) {
-  return knex.schema.createTable("orders", (table) => {
+  return knex.schema.createTable("order_items", (table) => {
     table.increments("id").primary();
     table
-      .integer("meal_seeker_id")
+      .integer("order_id")
       .unsigned()
       .references("id")
-      .inTable("meal_seekers")
+      .inTable("orders")
       .onDelete("CASCADE");
     table
-      .integer("cuisine_id")
+      .integer("meal_id")
       .unsigned()
       .references("id")
-      .inTable("cuisines")
+      .inTable("meals")
       .onDelete("CASCADE");
-    table.timestamp("created_at").defaultTo(knex.fn.now());
+    table.integer("quantity").notNullable();
   });
 }
 
@@ -26,5 +26,5 @@ export function up(knex) {
  * @returns { Promise<void> }
  */
 export function down(knex) {
-  return knex.schema.dropTable("orders");
+  return knex.schema.dropTable("order_items");
 }

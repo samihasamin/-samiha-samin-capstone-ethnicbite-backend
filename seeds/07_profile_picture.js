@@ -3,8 +3,8 @@
  * @returns { Promise<void> }
  */
 export async function seed(knex) {
-  await knex("profile_photos").del();
-  await knex("profile_photos").insert([
+  await knex("profile_picture").del();
+  await knex("profile_picture").insert([
     { caterer_id: 1, photo_url: "/assets/images/maria-papadopoulos-greek.jpg" },
     { caterer_id: 2, photo_url: "/assets/images/ahmed-hassan-egyptian.jpg" },
     { caterer_id: 3, photo_url: "/assets/images/rahim-uddin-bangladeshi.jpg" },
