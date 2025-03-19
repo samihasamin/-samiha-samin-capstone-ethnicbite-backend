@@ -11,6 +11,7 @@ export async function seed(knex) {
       name: "Greek Cuisine",
       description: "Authentic Mediterranean dishes",
       caterer_id: 1,
+      icon_url: "greek.jpg", //Placeholder
     },
     {
       id: 2,
@@ -18,6 +19,7 @@ export async function seed(knex) {
       name: "Egyptian Cuisine",
       description: "Traditional Egyptian meals",
       caterer_id: 2,
+      icon_url: "egyptian.jpg", //Placeholder
     },
     {
       id: 3,
@@ -25,6 +27,7 @@ export async function seed(knex) {
       name: "Bangladeshi Cuisine",
       description: "Spiced and flavorful Bengali dishes",
       caterer_id: 3,
+      icon_url: "bangladeshi.jpg", //Placeholder
     },
     {
       id: 4,
@@ -32,6 +35,7 @@ export async function seed(knex) {
       name: "Italian Cuisine",
       description: "Famous pasta, pizzas, and more",
       caterer_id: 4,
+      icon_url: "italian.jpg", //Placeholder
     },
     {
       id: 5,
@@ -39,6 +43,7 @@ export async function seed(knex) {
       name: "Thai Cuisine",
       description: "Spicy and aromatic Thai flavors",
       caterer_id: 5,
+      icon_url: "thai.jpg", //Placeholder
     },
     {
       id: 6,
@@ -46,6 +51,7 @@ export async function seed(knex) {
       name: "French Cuisine",
       description: "Classic European fine dining",
       caterer_id: 6,
+      icon_url: "french.jpg", //Placeholder
     },
     {
       id: 7,
@@ -53,6 +59,7 @@ export async function seed(knex) {
       name: "Pakistani Cuisine",
       description: "Rich flavors of Pakistani dishes",
       caterer_id: 7,
+      icon_url: "pakistani.jpg", //Placeholder
     },
     {
       id: 8,
@@ -60,6 +67,7 @@ export async function seed(knex) {
       name: "Indian Cuisine",
       description: "Spicy and diverse Indian flavors",
       caterer_id: 8,
+      icon_url: "indian.jpg", //Placeholder
     },
     {
       id: 9,
@@ -67,6 +75,7 @@ export async function seed(knex) {
       name: "Korean Cuisine",
       description: "Korean BBQ, kimchi, and more",
       caterer_id: 9,
+      icon_url: "korean.jpg", //Placeholder
     },
     {
       id: 10,
@@ -74,6 +83,7 @@ export async function seed(knex) {
       name: "Mexican Cuisine",
       description: "Tacos, enchiladas, and spicy flavors",
       caterer_id: 10,
+      icon_url: "mexican.jpg", //Placeholder
     },
     {
       id: 11,
@@ -81,6 +91,7 @@ export async function seed(knex) {
       name: "British Cuisine",
       description: "Comfort food classics from the UK",
       caterer_id: 11,
+      icon_url: "british.jpg", //Placeholder
     },
     {
       id: 12,
@@ -88,6 +99,7 @@ export async function seed(knex) {
       name: "Jamaican Cuisine",
       description: "Caribbean spice and jerk flavors",
       caterer_id: 12,
+      icon_url: "jamaican.jpg", //Placeholder
     },
   ]);
 }
