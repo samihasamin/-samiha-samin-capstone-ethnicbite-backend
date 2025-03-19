@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import caterersRoutes from "./routes/caterers-routes.js";
 import ordersRoutes from "./routes/orders-routes.js";
+import cuisineRoutes from "./routes/cuisine-routes.js";
 
 const app = express();
 
@@ -13,6 +14,7 @@ app.use(express.json());
 
 app.use("/api/caterers", caterersRoutes);
 app.use("/api/orders", ordersRoutes);
+app.use("/api/cuisines", cuisineRoutes);
 
 console.log(
   "Routes registered:",
