@@ -3,8 +3,14 @@ import knex from "../db.js";
 const getAllCaterers = async (req, res) => {
   try {
     let query = knex("caterers")
-      .select("caterers.id", "caterers.name", "cuisines.type as cuisine")
-      .join("cuisines", "caterers.id", "cuisines.caterer_id");
+      .select(
+        "caterers.id",
+        "caterers.name",
+        "cuisines.type as cuisine",
+        "profile_picture.photo_url"
+      )
+      .join("cuisines", "caterers.id", "cuisines.caterer_id")
+      .leftJoin("profile_picture", "caterers.id", "profile_picture.caterer_id");
 
     if (req.query.cuisine) {
       query = query.where("cuisines.type", req.query.cuisine);
