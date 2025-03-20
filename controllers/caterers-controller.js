@@ -25,6 +25,7 @@ const getAllCaterers = async (req, res) => {
 
 const getCatererById = async (req, res) => {
   try {
+    const { id } = req.params;
     const caterer = await knex("caterers")
       .where("caterers.id", id)
       .select("caterers.id", "caterers.name")
@@ -44,10 +45,10 @@ const getCatererById = async (req, res) => {
 
     const aboutMe = await knex("about_me")
       .where("caterer_id", id)
-      .select("description")
+      .select("bio")
       .first();
 
-    const profilePicture = await knex("profile_photos")
+    const profilePicture = await knex("profile_picture")
       .where("caterer_id", id)
       .select("photo_url")
       .first();

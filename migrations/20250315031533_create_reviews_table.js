@@ -21,7 +21,7 @@ export function up(knex) {
       .onDelete("CASCADE");
     table.integer("rating").notNullable().checkBetween([1, 5]); // Rating between 1-5
     table.text("review").notNullable();
-    table.timestamp("created_at").defaultTo(knex.fn.now());
+    table.timestamp("created_at").defaultTo(knex.fn.now()).notNullable();
   });
 }
 
