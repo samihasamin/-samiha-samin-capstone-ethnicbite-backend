@@ -8,6 +8,7 @@ export function up(knex) {
     table.string("type").notNullable(); // e.g., "Greek", "Nigerian"
     table.string("name").notNullable(); // Dish name
     table.text("description");
+    table.string("icon_url");
     table
       .integer("caterer_id")
       .unsigned()

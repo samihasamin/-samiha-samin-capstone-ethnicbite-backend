@@ -49,6 +49,8 @@ const getCatererById = async (req, res) => {
         "reviews.created_at"
       );
 
+    console.log("Fetched Reviews:", reviews);
+
     const aboutMe = await knex("about_me")
       .where("caterer_id", id)
       .select("bio")
@@ -67,6 +69,7 @@ const getCatererById = async (req, res) => {
       reviews,
     });
   } catch (error) {
+    console.error("Error fetching caterer details:", error);
     res.status(500).json({ message: "Error fetching caterer details", error });
   }
 };
