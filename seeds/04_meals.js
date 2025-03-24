@@ -67,7 +67,7 @@ export async function seed(knex) {
       name: "Foul Medames",
       description: "Mashed fava beans with spices",
       price: 8.0,
-      image_url: "foul.jpg",
+      image_url: "foulmedames.jpg",
       caterer_id: 2,
       cuisine_id: 2,
     },
