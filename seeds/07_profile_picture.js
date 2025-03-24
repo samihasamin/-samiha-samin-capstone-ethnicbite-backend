@@ -24,7 +24,7 @@ export async function seed(knex) {
     },
     {
       caterer_id: 12,
-      photo_url: "/assets/images/jamal-brown-jamaican.jpg",
+      photo_url: "/assets/images/jamal-brown-jamaican.JPG",
     },
   ]);
 }

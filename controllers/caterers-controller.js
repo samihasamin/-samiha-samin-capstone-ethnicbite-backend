@@ -28,7 +28,7 @@ const getCatererById = async (req, res) => {
     const { id } = req.params;
     const caterer = await knex("caterers")
       .where("caterers.id", id)
-      .select("caterers.id", "caterers.name")
+      .select("caterers.id", "caterers.name", "caterers.cuisine")
       .first();
 
     if (!caterer) {
