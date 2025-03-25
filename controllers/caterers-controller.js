@@ -40,10 +40,12 @@ const getCatererById = async (req, res) => {
       .select("id", "name", "description", "price", "image_url");
 
     const reviews = await knex("reviews")
-      .join("meal_seekers", "reviews.meal_seeker_id", "meal_seekers.id")
+      .leftJoin("meal_seekers", "reviews.meal_seeker_id", "meal_seekers.id")
       .where("reviews.caterer_id", id)
       .select(
-        "meal_seekers.name as meal_seeker_name",
+        knex.raw(
+          "COALESCE(reviews.meal_seeker_name, meal_seekers.name, 'Anonymous') as meal_seeker_name"
+        ),
         "reviews.rating",
         "reviews.review",
         "reviews.created_at"

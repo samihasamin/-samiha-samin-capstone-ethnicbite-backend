@@ -4,6 +4,7 @@ import caterersRoutes from "./routes/caterers-routes.js";
 import ordersRoutes from "./routes/orders-routes.js";
 import cuisineRoutes from "./routes/cuisine-routes.js";
 import mealsRoutes from "./routes/meals-routes.js";
+import reviewRoutes from "./routes/reviews-routes.js";
 
 const app = express();
 
@@ -17,5 +18,6 @@ app.use("/api/caterers", caterersRoutes);
 app.use("/api/orders", ordersRoutes);
 app.use("/api/cuisines", cuisineRoutes);
 app.use("/api/meals", mealsRoutes);
+app.use("/api/reviews", reviewRoutes);
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
