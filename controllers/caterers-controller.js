@@ -74,4 +74,23 @@ const getCatererById = async (req, res) => {
   }
 };
 
-export { getAllCaterers, getCatererById };
+const getCaterersByCuisine = async (req, res) => {
+  const { type } = req.params;
+  try {
+    const caterers = await knex("caterers")
+      .select(
+        "caterers.id",
+        "caterers.name",
+        "cuisines.type as cuisine",
+        "profile_picture.photo_url"
+      )
+      .join("cuisines", "caterers.id", "cuisines.caterer_id")
+      .leftJoin("profile_picture", "caterers.id", "profile_picture.caterer_id")
+      .where("cuisines.type", type);
+
+    res.status(200).json(caterers);
+  } catch (error) {
+    res.status(500).json({ message: "Error fetching caterers", error });
+  }
+};
+export { getAllCaterers, getCatererById, getCaterersByCuisine };
