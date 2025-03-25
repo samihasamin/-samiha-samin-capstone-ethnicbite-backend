@@ -13,14 +13,14 @@ export async function up(knex) {
 export async function down(knex) {
   return knex.schema
     .alterTable("reviews", (table) => {
-      table.integer("meal_seeker_id").notNullable().alter(); // Step 1: Make not null again
+      table.integer("meal_seeker_id").notNullable().alter();
     })
     .then(() => {
       return knex.schema.alterTable("reviews", (table) => {
         table
           .foreign("meal_seeker_id")
           .references("id")
-          .inTable("meal_seekers"); // Step 2: Re-add FK if needed
+          .inTable("meal_seekers");
       });
     });
 }
